@@ -1,6 +1,7 @@
 import fitz
-
-doc = fitz.open("data\resume.pdf")
-for page in doc:
-    text = page.get_text()
-    print(text)
+document = fitz.open("data/resume.pdf")
+def extract_resume(doc):
+    text = ""    
+    for page in doc:
+        text += page.get_text()
+    return text
