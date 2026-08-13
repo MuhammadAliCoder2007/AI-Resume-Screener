@@ -1,5 +1,5 @@
 import fitz # for pdf processing
-from extract_reume import extract_resume # for extracting text from pdf
+from src.extract_reume import extract_resume # for extracting text from pdf
 document = fitz.open("data/resume.pdf") # open the resume pdf
 text = extract_resume(document) # extract the text from the resume pdf
 def preprocess(text):
